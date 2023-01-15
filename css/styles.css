@@ -132,6 +132,7 @@ body {
   }
   .mobile-menu.is-open {
     transform: translateX(0);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
   }
   .mobile-menu-close-bnt {
     position: absolute;
@@ -964,12 +965,145 @@ footer {
     flex-direction: row;
   }
 }
+/* ========== Portfolio =========== */
+@media screen and (max-width: 767px) {
+  .site-filter {
+    max-width: 270px;
+  }
+  .portfolio-list .item:not(:last-child) {
+    margin-bottom: 48px;
+  }
+}
+.portfolio-section {
+  padding-bottom: 48px;
+  padding-top: 48px;
+}
+.site-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.site-filter .button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background-color: #f4f4fd;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-filter .button:hover,
+.site-filter .button:focus {
+  color: var(--white-hero-text);
+  background-color: var(--accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--accent);
+}
+.portfolio-list .thumb {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-list .actions-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
 
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(77, 90, 229, 0.95);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list .item {
+  max-width: 396px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list .link:hover .actions-card {
+  transform: translateY(0);
+}
+.portfolio-list .link:focus .actions-card {
+  transform: translateY(0);
+}
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-list .discription {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+}
+.portfolio-list .titte-card {
+  padding: 32px 20px;
+  border: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  border-top: none;
+}
+.portfolio-list .title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-title);
+}
+.portfolio-list .text {
+  margin-top: 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text);
+}
 
-
-
-/* modal */
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .site-filter {
+    margin-bottom: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .site-filter .button {
+    padding: 12px 24px;
+  }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .portfolio-list .item {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+  .portfolio-list .item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+}
+/* ========== modal ============ */
 .backdrop {
   position: fixed;
   top: 0;
@@ -997,8 +1131,8 @@ footer {
   transform: scale(1) translate(-50%, -50%);
 
   padding: 72px 24px 24px 24px;
-  min-width: 408px;
-  min-height: 576px;
+  min-width: 392px;
+  min-height: 586px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1204,4 +1338,16 @@ textarea {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    min-width: 408px;
+    min-height: 586px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 408px;
+    min-height: 584px;
+  }
 }
