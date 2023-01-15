@@ -17,43 +17,106 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Portfolio</title>
   </head>
-
   <body>
-    <!-- Header -->
+    <!-- ========== Header ========== -->
     <header class="header-section">
       <div class="container main-nav">
         <nav class="nav">
-          <!-- Logotype -->
           <a href="./index.html" class="logo link"
             >Web<span class="logo-header">Studio</span></a
           >
-          <!-- Navigation to other pages -->
           <ul class="site-nav list">
             <li class="item">
-              <a href="./index.html" class="link">Studio</a>
+              <a href="./index.html" class="link current">Studio</a>
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="link current">Portfolio</a>
+              <a href="./portfolio.html" class="link">Portfolio</a>
             </li>
             <li class="item">
               <a href="#" class="link">Contacts</a>
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn js-open-menu">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         <ul class="contacts list">
-          <!-- Link to email address  -->
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link"
               >info@devstudio.com</a
             >
           </li>
-          <!-- Link to phone number -->
           <li class="item">
             <a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a>
           </li>
         </ul>
       </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close-bnt js-close-menu">
+            <svg class="menu-modal-button-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <ul class="menu-site-nav list">
+            <li class="item">
+              <a href="./index.html" class="link">Studio</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Portfolio</a>
+            </li>
+            <li class="item">
+              <a href="#" class="link current">Contacts</a>
+            </li>
+          </ul>
+          <ul class="menu-contacts list">
+            <li class="item">
+              <a href="tel:+110001111111" class="link phone-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="item">
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-social-list list">
+            <li>
+              <a href="#" class="menu-social-link instagram">
+                <svg class="icon-social">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-social-link twitter">
+                <svg class="icon-social">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-social-link facebook">
+                <svg class="icon-social">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu-social-link linkedin">
+                <svg class="icon-social">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+    <main>
     <!-- Main page content -->
     <main>
       <section class="section portfolio-section">
@@ -80,12 +143,17 @@
             <li class="item">
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="./images/portfolio/deck-banking-app-interface-concept.jpg 1x, ./images/portfolio/deck-banking-app-interface-concept@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./images/portfolio/tab-banking-app-interface-concept.jpg 1x, ./images/portfolio/tab-banking-app-interface-concept@2x.jpg 2x">
+                    <source media="(max-width: 767px)" srcset="./images/portfolio/mob-banking-app-interface-concept.jpg 1x, ./images/portfolio/mob-banking-app-interface-concept@2x.jpg 2x">
                   <img
-                    src="./images/banking-app-interface-concept.jpg"
+                    src="./images/portfolio/mob-banking-app-interface-concept.jpg"
                     alt="seven tabs of the bank's mobile application"
                     width="360"
                     height="300"
                   />
+                  </picture>
                   <div class="actions-card">
                     <p class="discription">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -103,12 +171,17 @@
             <li class="item">
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
+                    <picture>
+                    <source media="(min-width: 1200px)" srcset="./images/portfolio/deck-cashless-payment.jpg 1x, ./images/portfolio/deck-cashless-payment@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./images/portfolio/tab-cashless-payment.jpg 1x, ./images/portfolio/tab-cashless-payment@2x.jpg 2x">
+                    <source media="(max-width: 767px)" srcset="./images/portfolio/mob-cashless-payment.jpg 1x, ./images/portfolio/mob-cashless-payment@2x.jpg 2x">
                   <img
-                    src="./images/cashless-payment.jpg"
+                    src="./images//portfolio/mob-cashless-payment.jpg"
                     alt="mobile app with qr code on screen"
                     width="360"
                     height="300"
                   />
+                  </picture>
                   <div class="actions-card">
                     <p class="discription">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -126,12 +199,17 @@
             <li class="item">
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
+                    <picture>
+                    <source media="(min-width: 1200px)" srcset="./images/portfolio/deck-meditaion-app.jpg 1x, ./images/portfolio/deck-meditaion-app@2x.jpg 2x">s
+                    <source media="(min-width: 768px)" srcset="./images/portfolio/tab-meditaion-app.jpg 1x, ./images/portfolio/tab-meditaion-app@2x.jpg 2x">
+                    <source media="(max-width: 767px)" srcset="./images/portfolio/mob-meditaion-app.jpg 1x, ./images/portfolio/mob-meditaion-app@2x.jpg 2x">
                   <img
-                    src="./images/meditaion-app.jpg"
+                    src="./images//portfolio/mob-meditaion-app.jpg"
                     alt="Laptop and mobile phone with the start page of the applicatoin"
                     width="360"
                     height="300"
                   />
+                    </picture>
                   <div class="actions-card">
                     <p class="discription">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -150,7 +228,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/taxi-service.jpg"
+                    src="./images//portfolio/taxi-service.jpg"
                     alt="Wheel and instrument panel in the car"
                     width="360"
                     height="300"
@@ -173,7 +251,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/screen-illustrations.jpg"
+                    src="./images//portfolio/screen-illustrations.jpg"
                     alt="Five mobile screensavers"
                     width="360"
                     height="300"
@@ -196,7 +274,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/online-courses.jpg"
+                    src="./images//portfolio/online-courses.jpg"
                     alt="Girl with phone and headphones in her hand"
                     width="360"
                     height="300"
@@ -219,7 +297,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/instagram-stories-concept.jpg"
+                    src="./images//portfolio/instagram-stories-concept.jpg"
                     alt="Post pages for instagram"
                     width="360"
                     height="300"
@@ -242,7 +320,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/organic-food.jpg"
+                    src="./images//portfolio/organic-food.jpg"
                     alt="Bag with vegetables"
                     width="360"
                     height="300"
@@ -265,7 +343,7 @@
               <a href="#" class="link portfolio-card">
                 <div class="thumb">
                   <img
-                    src="./images/fresh-coffee.jpg"
+                    src="./images//portfolio/fresh-coffee.jpg"
                     alt="Cup of coffee"
                     width="360"
                     height="300"
@@ -291,48 +369,49 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-block">
-          <!-- Logotype -->
-          <a href="./index.html" class="logo link"
-            >Web<span class="logo-footer">Studio</span></a
-          >
-          <p class="text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="footer-social-block">
-          <h2 class="social-link-title">Social media</h2>
-          <ul class="footer-social-list list">
-            <li>
-              <a href="#" class="footer-social-link instagram">
-                <svg class="footer-icon-social">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer-social-link twitter">
-                <svg class="footer-icon-social">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer-social-link facebook">
-                <svg class="footer-icon-social">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer-social-link linkedin">
-                <svg class="footer-icon-social">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-row">
+          <div class="footer-block">
+            <a href="./index.html" class="logo link"
+              >Web<span class="logo-footer">Studio</span></a
+            >
+            <p class="text">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+          <div class="footer-social-block">
+            <h2 class="social-link-title">Social media</h2>
+            <ul class="footer-social-list list">
+              <li>
+                <a href="#" class="footer-social-link instagram">
+                  <svg class="footer-icon-social">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link twitter">
+                  <svg class="footer-icon-social">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link facebook">
+                  <svg class="footer-icon-social">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link linkedin">
+                  <svg class="footer-icon-social">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <form class="subscribe-form" action="">
           <form role="group" aria-labelledby="subscribe">
