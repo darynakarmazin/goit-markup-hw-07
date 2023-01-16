@@ -868,7 +868,6 @@ footer {
 }
 .subscribe-input {
   margin-bottom: 16px;
-  width: 396px;
   padding: 7px 16px;
   font-size: 12px;
   line-height: 2;
@@ -912,6 +911,12 @@ footer {
 .subscribe-icon {
   fill: currentColor;
   margin-left: 16px;
+}
+@media screen and (max-width: 767px) {
+  .subscribe-input {
+    min-width: 320px;
+    max-width: 396px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-container {
