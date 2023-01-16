@@ -100,7 +100,6 @@ body {
   }
 }
 /* ========== Header ========== */
-
 @media screen and (max-width: 767px) {
   .site-nav {
     display: none;
@@ -283,6 +282,11 @@ body {
 }
 .logo-header {
   color: var(--primary-title);
+}
+@media screen and (max-width: 480px) {
+  .menu-contacts .phone-link {
+    font-size: 24px;
+  }
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
