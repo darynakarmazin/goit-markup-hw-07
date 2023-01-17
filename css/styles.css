@@ -818,7 +818,6 @@ footer {
   color: #e7e9fc;
 }
 .footer-social-block {
-  margin-bottom: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -916,6 +915,9 @@ footer {
   fill: currentColor;
   margin-left: 16px;
 }
+.footer-row {
+  margin-bottom: 72px;
+}
 @media screen and (max-width: 767px) {
   .subscribe-input {
     min-width: 320px;
@@ -935,6 +937,7 @@ footer {
   }
   .footer-block {
     margin-right: 24px;
+    margin-bottom: 0;
     flex-direction: column;
     align-items: flex-start;
     max-width: 264px;
@@ -974,11 +977,11 @@ footer {
     margin-right: 120px;
     margin-bottom: 0;
   }
-  .footer-social-block {
-    margin-bottom: 0;
-  }
   .subscribe-form {
     margin-left: 80px;
+  }
+  .footer-row {
+    margin-bottom: 0;
   }
   .subscribe-row {
     display: flex;
